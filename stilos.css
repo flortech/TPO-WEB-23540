@@ -1,0 +1,282 @@
+header{
+    display:flex;
+    justify-content: left;
+    background-color: white;
+    height: 100px;
+    font-family: Verdana, sans-serif;
+}
+
+body{
+    background: rgb(7,0,36);
+    background: linear-gradient(0deg, rgba(7,0,36,1) 1%, rgba(65,28,255,0.4514180672268907) 51%);
+}
+
+
+header{
+    display: flex;
+    text-align: center;
+}
+
+li{
+  list-style:none
+}
+
+.container{
+  text-align: justify;
+}
+
+.checkbox, .icons{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    cursor:pointer;
+
+}
+
+.icons{
+    pointer-events: none;
+    font-size: 24px;
+}
+.checkbox{
+    opacity: 0;
+}
+
+.fi-br-cross{
+    display: none;
+}
+.checkbox:checked ~ .fi-br-menu-burger{
+    display: none;
+}
+.checkbox:checked ~ .fi-br-cross{
+    display: block;
+}
+
+nav{
+  width: 100%;
+  background-color:#181f34;
+  text-align: center;
+  color: #ffffff;
+}
+
+nav ul{
+   list-style: none;
+   display: inline-block;
+   padding:18px;
+   color: #ffffff;
+}
+
+nav ul li{
+    float: left;
+    margin-top: 20px;
+    color: #ffffff;
+    list-style:none
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 18px;
+    list-style:none
+}
+
+nav ul li a:hover{
+  background-color: #929fb3;
+  color: #ffffff;
+  list-style:none
+}
+
+
+/*CARROUSEL*/
+
+  .slider-frame {
+	width: 100%; 
+    height: auto;
+	margin:50px auto 0;
+	overflow: hidden;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+/*SERVICIOS */
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    
+  }
+  
+  .card {
+    width:20%; 
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card-header{
+    padding:5px;
+    text-align: center;
+    background: blueviolet;
+    color: #fff;
+}
+
+  .card-content {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card:hover .card-content {
+    opacity: 1; 
+  }
+
+
+  .sec2 {
+    background:#ffffff;
+  }
+
+  .wrapper{
+    padding-right: 50px;
+    padding-left: 30px;
+  }
+
+  .t1{
+    color: white;
+  }
+
+  footer {
+    font-size: small;
+    border-top: 1px;
+    line-height:40px;
+    background:blueviolet;
+    color:#fbfbfb;                    
+    text-align:center;
+    left:0;
+    bottom: 0;
+    width:100%;
+    display: flex;
+	  justify-content: center;
+    display: flex;
+    font-family: Verdana, sans-serif;
+ 
+    padding: 1px;
+    padding-top: 1px;
+    margin-top: 0px;
+}
+  
+/* Probando responsive*/
+
+@media screen and (max-width: 1000px) {
+    .card {
+      width: 30%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+        .card {
+          width: 45%;
+        }
+        
+    }
+
+section a{
+    padding:10px;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  nav {
+    float: right;
+    align-items: end;
+
+  }
+
+  nav ul {
+    list-style: none;
+    overflow: hidden; 
+  }
+
+  a {
+    color: #ffffff;
+  }
+
+  .cl{
+    color: #181f34;
+  }
+
+  nav ul li {
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;;
+    font-size: 20px;
+    list-style:none
+
+  }
+
+  nav ul li a {
+    display: block; 
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    list-style:none
+  }
+
+  nav ul li:hover {
+    background: blueviolet;
+    list-style:none;
+  }
+
+
+  .mail{
+    color: #181f34;
+  }
+  
+  
+
