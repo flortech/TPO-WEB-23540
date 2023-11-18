@@ -99,8 +99,32 @@
     </div>
   </div>
 
+  <div class="sec3">
+
+  <h2>Quieres saber el clima de hoy?</h2>
+
+  <button onclick="getWeather()">Obtener clima</button>
+  
+  <p id="weather"></p>
+  
+  <script>
+  function getWeather() {
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Buenos%20Aires&appid=e24389b7110155ebc5460e20a1fdff21')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("weather").innerHTML = 
+        "El clima en Buenos Aires es: " + data.weather[0].description;
+    })
+    .catch(error => console.error('Error:', error));
+  }
+  </script>
+
+</div>
+
+
+
 <footer>
-  <a>TPO 23540 / Monica-Luis-Flor</a>
+  <a>TPO 23540 / Flor - Monica - Luis</a>
 </footer>
 </body>
 </html>

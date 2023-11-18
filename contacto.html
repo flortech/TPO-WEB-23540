@@ -29,41 +29,61 @@
 
     <section class="sec2">
 
-    <a name="Quienes somos" class="mail"><h2>Contactenos</h2></a>
+    <a name="Contactenos" class="mail"><h2>Contactenos</h2></a>
 
   </section>
 
   </main>
   <br>
   <div class="container">
-        <form action="/index.html" method="post">
-            <ul>
-              <li>
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="user_name" />
-              </li>
-              <li>
-                <label for="mail">Correo electrónico:</label>
-                <input type="email" id="mail" name="user_mail" />
-              </li>
-              <li>
-                <label for="msg">Mensaje:</label>
-                <textarea id="msg" name="user_message"></textarea>
-              </li>
-              <li class="button">
-                <button type="submit">Envíe su mensaje</button>
-              </li>
-            </ul>
-          </form>
+
+    
+     
+    <script>
+        function validarFormulario() {
+            var nombre = document.forms["miForm"]["nombre"].value;
+            var correo = document.forms["miForm"]["correo"].value;
+
+            var regexNombre = /^[a-zA-Z\s]+$/;
+            var regexCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (nombre == "" || correo == "" ||
+                !regexNombre.test(nombre) || !regexCorreo.test(correo)) {
+                alert("Todos los campos deben ser llenados correctamente");
+                return false;
+            } else {
+                alert("Formulario enviado con éxito");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="miForm" action="" onsubmit="return validarFormulario()" method="post">
+        Nombre:<br>
+        <input type="text" name="nombre"><br>
+        Correo:<br>
+        <input type="text" name="correo"><br>
+        <input type="submit" value="Enviar">
+    </form>
 
 
 
+
+
+        <div>
+        <section class="sec2">
+            <a class="cl" name="Donde estamos"><h2>Donde estamos</h2></a>
+          </section>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13135.725709776854!2d-58.50034414916049!3d-34.605895455801125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9df44319d89%3A0x72e02046997c8cef!2sVilla%20del%20Parque%2C%20CABA!5e0!3m2!1ses!2sar!4v1700017189752!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
   </div>
 
 <footer>
   <a>TPO 23540 / Monica-Luis-Flor</a>
 </footer>
-
+<script src="validacion.js"></script>
 </body>
 </html>
